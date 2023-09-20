@@ -14,6 +14,7 @@ function ItemDetail({id, nombre, precio, stock, descripcion, categoria, imagen})
         setQuantityAdded(quantity)
          const item = {
             id, nombre, precio, imagen}
+            console.log(quantity)
         addItem(item, quantity)
     }
 

@@ -7,10 +7,9 @@ import CartItem from '../CartItem/CartItem';
 
 
 const Cart = () => {
-    const { cart, totalQuantity, totalPrice, clearCart } = useContext(CartContext);
+    const { cart, totalPrice, clearCart } = useContext(CartContext);
 
-
-    if (totalQuantity === 0) {
+    if (cart.length === 0) {
         return (
             <div>
                 <h1 className='title is-1'> No hay Productos en el carrito </h1>
