@@ -10,11 +10,11 @@ function ItemListContainer( { greeting } )
     const {categoryId} = useParams();
     const [productos, setProductos] = useState([]);
     const [loading, setLoading] = useState(true)
-
+    console.log(categoryId)
     useEffect(() => {
         setLoading(true)
         const collectionRef = categoryId
-        ?  query(collection(db, 'productos'), where ('category', '==', categoryId))
+        ?  query(collection(db, 'productos'), where ('categoria', '==', categoryId))
         : collection(db, 'productos')
 
         getDocs(collectionRef)

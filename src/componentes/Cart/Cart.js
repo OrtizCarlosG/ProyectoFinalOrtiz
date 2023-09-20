@@ -10,7 +10,7 @@ const Cart = () => {
     const { cart, totalQuantity, totalPrice, clearCart } = useContext(CartContext);
 
 
-    if (totalQuantity() === 0) {
+    if (totalQuantity === 0) {
         return (
             <div className='container'>
                 <h1 className='containerH1'> No hay Productos en el carrito </h1>
@@ -26,13 +26,13 @@ const Cart = () => {
             }
             <div className='container-total'>
                 <p className='Total'>
-                    Total: {totalPrice()}
+                    Total: {totalPrice}
                 </p>
                 <div className='ButtonD'>
                     
                     <div className='containerCheckout'>
 
-                    <Link to='/checkoutForm' className='c'> Finalizar Compra </Link>
+                    <Link to='/checkout' className='c'> Finalizar Compra </Link>
 
                     </div>
                     <div className='containerCa'>

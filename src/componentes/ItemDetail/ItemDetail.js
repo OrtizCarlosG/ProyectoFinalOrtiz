@@ -37,11 +37,11 @@ function ItemDetail({id, nombre, precio, stock, descripcion, categoria, imagen})
                     </div>
                     <footer className="card-footer">
                         {
-                        quantityAdded > 0 ? (
-                                <Link to="/cart" className="button is-primary">Terminar Compra</Link>
-                        ) : (
-                        <ItemCount initial={1} stock={stock} onAdd={ (quantity) =>handleAdded(quantity)}/>
-                        )
+                               quantityAdded > 0 ? (
+                               <Link to="/cart" className="button is-primary">Terminar Compra</Link>
+                           ) : (
+                           <ItemCount initial={0} stock={stock} onAdd={ (quantity) =>handleAdded(quantity)}/>
+                           )
                         }
                     </footer>
                 </div>
