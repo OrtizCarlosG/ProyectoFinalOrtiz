@@ -40,7 +40,7 @@ function ItemDetail({id, nombre, precio, stock, descripcion, categoria, imagen})
                                quantityAdded > 0 ? (
                                <Link to="/cart" className="button is-primary">Terminar Compra</Link>
                            ) : (
-                           <ItemCount initial={1} stock={stock} onAdd={ (quantity) =>handleAdded(quantity)}/>
+                           <ItemCount initial={0} stock={stock} onAdd={ (quantity) =>handleAdded(quantity)}/>
                            )
                         }
                     </footer>
