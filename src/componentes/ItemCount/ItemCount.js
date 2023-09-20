@@ -23,7 +23,7 @@ function ItemCount({stock, initial, onAdd})
                     <span className="tag is-primary is-medium">{quantity}</span>
                     <button className="button is-primary" onClick={increment}>+</button>
                 </div>
-                <button className="button is-success" onClick={onAdd(quantity)} disabled = {!stock}>Agregar al carrito</button>
+                <button className="button is-success" onClick={() => onAdd(quantity)} disabled = {!stock}>Agregar al carrito</button>
             </div>
     );       
 }
