@@ -6,27 +6,27 @@ import { useContext } from 'react';
 
 
 const CartItem = ({ products }) => {
-    const { removeProducts} = useContext(CartContext)
+    const { removeItem} = useContext(CartContext)
 
 
     return (
         <div className='container'>
             <picture>
 
-                <img src={products.img} alt={products.name} className="imgContainer"/>
+                <img src={products.imagen} alt={products.nombre} className="imgContainer"/>
 
             </picture>
             <div className='productsCategorie'>
                 <h2>
-                    {products.name}
+                    {products.nombre}
                 </h2>
                 <p>
                     Cantidad: {products.quantity}
                 </p>
                 <p>
-                    Subtotal: {products.quantity * products.price}
+                    Subtotal: {products.quantity * products.precio}
                 </p>
-                <button onClick={() => removeProducts(products.id)}>Eliminar</button>
+                <button onClick={() => removeItem(products.id)}>Eliminar</button>
                 
             </div>
         </div>

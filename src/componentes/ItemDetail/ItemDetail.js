@@ -12,9 +12,9 @@ function ItemDetail({id, nombre, precio, stock, descripcion, categoria, imagen})
     function handleAdded(quantity)
     {
         setQuantityAdded(quantity)
-
-            const item = {id, nombre, precio}
-    addItem(item, quantity)
+         const item = {
+            id, nombre, precio, imagen}
+        addItem(item, quantity)
     }
 
     return (
@@ -40,7 +40,7 @@ function ItemDetail({id, nombre, precio, stock, descripcion, categoria, imagen})
                                quantityAdded > 0 ? (
                                <Link to="/cart" className="button is-primary">Terminar Compra</Link>
                            ) : (
-                           <ItemCount initial={0} stock={stock} onAdd={ (quantity) =>handleAdded(quantity)}/>
+                           <ItemCount initial={1} stock={stock} onAdd={ (quantity) =>handleAdded(quantity)}/>
                            )
                         }
                     </footer>
